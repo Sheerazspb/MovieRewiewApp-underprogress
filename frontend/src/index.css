@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.bounce-custum {
+  animation: bounce-custum 1s;
+}
+.animate-scale {
+  transform-origin: 0% 0%;
+  animation: scale 0.3s;
+}
+.animate-scale-revrese {
+  transform-origin: 0% 0%;
+  animation: scale 3s reverse forwards;
+}
+.custum-scroll-bar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px
+}
+.custum-scroll-bar::-webkit-scrollbar-track {
+  background: #222222;
+}
+.custum-scroll-bar::-webkit-scrollbar-thumb {
+  background: rgb(224, 201, 251);
+}
+.custum-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: rgb(143, 190, 245);
+}
+
+/* For Slider */
+.slide-in-from-right {
+  animation: slideInFromRight 1s ease;
+}
+.slide-out-to-left {
+  animation: slideOutToLeft 1s ease;
+}
+
+.slide-in-from-left {
+  animation: slideInFromLeft 1s ease;
+}
+.slide-out-to-right {
+  animation: slideOutToRight 1s ease;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes bounce-custum {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+@keyframes scale {
+  0%{
+    transform: scaleY(0)
+  }
+  100%{
+    transform: scaleY(1)
+  }
+}
+
+
